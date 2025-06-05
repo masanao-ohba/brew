@@ -1,0 +1,115 @@
+# === 0. Minimum Requirements ===
+brew "coreutils"
+brew "bash"
+brew "openssl@1.1"
+brew "wget"
+brew "watch"
+brew "rename"
+brew "tree"
+brew "zsh"
+brew "stow"
+
+# === 1. System Libraries / Runtime ===
+brew "apr-util"
+brew "libevent"
+brew "libssh2"
+brew "bzip2"
+brew "glib"
+brew "pcre"
+brew "pcre2"
+brew "unbound"
+brew "gnutls"
+
+# === 2. Casks: GUI Applications ===
+cask "font-hack-nerd-font"
+cask "font-jetbrains-mono-nerd-font"
+cask "google-cloud-sdk"
+cask "hiddenbar"
+cask "jordanbaird-ice"
+cask "keycastr"
+cask "neardrop"
+cask "ngrok"
+cask "sip"
+cask "wezterm@nightly"
+
+# === 3. External Taps ===
+tap "aquaproj/aqua"
+tap "cloudquery/tap"
+tap "grishka/grishka"
+tap "homebrew/bundle"
+tap "homebrew/services"
+tap "ngrok/ngrok"
+tap "owlinux1000/tap"
+tap "shopify/shopify"
+
+# === 4. Development Tools ===
+brew "gh"
+brew "go"
+brew "neovim"
+brew "lazygit"
+brew "starship"
+brew "sqlparse"
+brew "reattach-to-user-namespace"
+brew "perl"
+brew "jq"
+brew "ripgrep"
+brew "fd"
+brew "dateutils"
+brew "pycparser"
+brew "cffi"
+brew "cryptography"
+brew "docutils"
+brew "pwgen"
+brew "tfenv"
+
+# === 5. Python Environment ===
+brew "pyenv"
+brew "pyenv-virtualenv"
+brew "python-yq", link: false
+
+# === 6. Package Managers ===
+brew "nvm"
+brew "volta"
+brew "aquaproj/aqua/aqua"
+
+# === 7. Cloud / Infra Tools ===
+brew "awscli"
+brew "argo"
+brew "cloudquery/tap/cloudquery"
+brew "owlinux1000/tap/gcstree"
+brew "shopify/shopify/shopify-cli"
+brew "ngrok"
+brew "mysql-client"
+brew "mysql@8.4", link: true
+
+# === 8. Visual / CLI Utility ===
+brew "bat"
+brew "nkf"
+brew "xq"
+brew "yq"
+brew "cmatrix"
+brew "parallel"
+brew "gdrive"
+
+# === 9. Media / Graphics ===
+brew "aom"
+brew "libavif"
+brew "jpeg-xl"
+brew "jpegoptim"
+brew "webp"
+brew "little-cms2"
+brew "openjpeg"
+brew "leptonica"
+brew "libheif"
+brew "libraw"
+brew "gd"
+brew "gdk-pixbuf"
+brew "graphviz"
+brew "netpbm"
+brew "ghostscript"
+brew "imagemagick"
+brew "pango"
+brew "harfbuzz"
+brew "tesseract"
+brew "yt-dlp"
+
