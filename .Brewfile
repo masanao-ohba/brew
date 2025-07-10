@@ -19,8 +19,13 @@ brew "pcre"
 brew "pcre2"
 brew "unbound"
 brew "gnutls"
+brew "rtmpdump"
+brew "freetds"
+brew "tidy-html5"
+brew "libfido2"
 
 # === 2. Casks: GUI Applications ===
+cask "blackhole-16ch"
 cask "font-hack-nerd-font"
 cask "font-jetbrains-mono-nerd-font"
 cask "google-cloud-sdk"
@@ -29,7 +34,9 @@ cask "jordanbaird-ice"
 cask "keycastr"
 cask "neardrop"
 cask "ngrok"
-cask "sip"
+cask "sip-app"
+cask "slack-cli"
+cask "thebrowsercompany-dia"
 cask "wezterm@nightly"
 
 # === 3. External Taps ===
@@ -38,6 +45,7 @@ tap "cloudquery/tap"
 tap "grishka/grishka"
 tap "homebrew/bundle"
 tap "homebrew/services"
+tap "koekeishiya/formulae"
 tap "ngrok/ngrok"
 tap "owlinux1000/tap"
 tap "shopify/shopify"
@@ -61,37 +69,49 @@ brew "cryptography"
 brew "docutils"
 brew "pwgen"
 brew "tfenv"
-
-# === 5. Python Environment ===
+brew "fzf"
+brew "tmux"
+brew "blueutil"
+brew "nkf"
+brew "pngpaste"
+brew "osv-scanner"
+brew "openfortivpn"
+brew "php"
+brew "composer"
 brew "pyenv"
 brew "pyenv-virtualenv"
 brew "python-yq", link: false
+brew "python@3.9"
+brew "python@3.10"
+brew "python@3.11"
+brew "python@3.12"
 
-# === 6. Package Managers ===
+# === 5. Package Managers ===
 brew "nvm"
 brew "volta"
 brew "aquaproj/aqua/aqua"
+brew "fnm"
 
-# === 7. Cloud / Infra Tools ===
+# === 6. Cloud / Infra Tools ===
 brew "awscli"
 brew "argo"
 brew "cloudquery/tap/cloudquery"
 brew "owlinux1000/tap/gcstree"
 brew "shopify/shopify/shopify-cli"
-brew "ngrok"
+brew "mysql", restart_service: :changed
 brew "mysql-client"
-brew "mysql@8.4", link: true
+brew "koekeishiya/formulae/skhd"
+brew "koekeishiya/formulae/yabai"
 
-# === 8. Visual / CLI Utility ===
+# === 7. Visual / CLI Utility ===
 brew "bat"
-brew "nkf"
 brew "xq"
 brew "yq"
 brew "cmatrix"
 brew "parallel"
 brew "gdrive"
 
-# === 9. Media / Graphics ===
+# === 8. Media / Graphics ===
 brew "aom"
 brew "libavif"
 brew "jpeg-xl"
@@ -112,4 +132,5 @@ brew "pango"
 brew "harfbuzz"
 brew "tesseract"
 brew "yt-dlp"
-
+brew "ffmpeg"
+brew "librsvg"
