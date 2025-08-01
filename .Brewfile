@@ -1,45 +1,8 @@
-# === 0. Minimum Requirements ===
-brew "coreutils"
-brew "bash"
-brew "openssl@1.1"
-brew "wget"
-brew "watch"
-brew "rename"
-brew "tree"
-brew "zsh"
-brew "stow"
+# =============================================================================
+# Homebrew Brewfile - macOS Development Environment
+# =============================================================================
 
-# === 1. System Libraries / Runtime ===
-brew "apr-util"
-brew "libevent"
-brew "libssh2"
-brew "bzip2"
-brew "glib"
-brew "pcre"
-brew "pcre2"
-brew "unbound"
-brew "gnutls"
-brew "rtmpdump"
-brew "freetds"
-brew "tidy-html5"
-brew "libfido2"
-
-# === 2. Casks: GUI Applications ===
-cask "blackhole-16ch"
-cask "font-hack-nerd-font"
-cask "font-jetbrains-mono-nerd-font"
-cask "google-cloud-sdk"
-cask "hiddenbar"
-cask "jordanbaird-ice"
-cask "keycastr"
-cask "neardrop"
-cask "ngrok"
-cask "sip-app"
-cask "slack-cli"
-cask "thebrowsercompany-dia"
-cask "wezterm@nightly"
-
-# === 3. External Taps ===
+# Third-party taps
 tap "aquaproj/aqua"
 tap "cloudquery/tap"
 tap "grishka/grishka"
@@ -50,87 +13,205 @@ tap "ngrok/ngrok"
 tap "owlinux1000/tap"
 tap "shopify/shopify"
 
-# === 4. Development Tools ===
-brew "gh"
-brew "go"
-brew "neovim"
-brew "lazygit"
-brew "starship"
-brew "sqlparse"
-brew "reattach-to-user-namespace"
-brew "perl"
-brew "jq"
-brew "ripgrep"
-brew "fd"
+# =============================================================================
+# System Libraries & Dependencies
+# =============================================================================
+brew "libpng"
+brew "little-cms2"
+brew "webp"
+brew "jpeg-xl"
+brew "aom"
+brew "apr-util"
+brew "libssh2"
+brew "bzip2"
+brew "pcre2"
+brew "glib"
+brew "libevent"
+brew "unbound"
+brew "gnutls"
+brew "harfbuzz"
+brew "openjpeg"
+brew "leptonica"
+brew "pango"
+brew "libavif"
+brew "gd"
+brew "libzip"
+brew "libheif"
+brew "libraw"
+brew "libfido2"
+brew "libiconv"
+brew "libxml2"
+brew "zlib"
+brew "pcre"
+brew "pkgconf"
+brew "re2c"
+
+# =============================================================================
+# Core Development Tools & Utilities
+# =============================================================================
+brew "autoconf"
+brew "automake"
+brew "bash"
+brew "bison"
+brew "coreutils"
 brew "dateutils"
-brew "pycparser"
-brew "cffi"
-brew "cryptography"
 brew "docutils"
-brew "pwgen"
-brew "tfenv"
-brew "fzf"
-brew "tmux"
-brew "blueutil"
-brew "nkf"
-brew "pngpaste"
-brew "osv-scanner"
-brew "openfortivpn"
-brew "php"
-brew "composer"
-brew "pyenv"
-brew "pyenv-virtualenv"
-brew "python-yq", link: false
+brew "parallel"
+brew "perl"
+brew "stow"
+brew "watch"
+brew "wget"
+
+# =============================================================================
+# Programming Languages & Version Managers
+# =============================================================================
+# Python
 brew "python@3.9"
 brew "python@3.10"
 brew "python@3.11"
 brew "python@3.12"
+brew "pyenv"
+brew "pyenv-virtualenv"
+brew "uv"
 
-# === 5. Package Managers ===
+# Node.js
+brew "fnm"
 brew "nvm"
 brew "volta"
-brew "aquaproj/aqua/aqua"
-brew "fnm"
 
-# === 6. Cloud / Infra Tools ===
-brew "awscli"
+# Go
+brew "go"
+
+# PHP
+brew "tidy-html5"
+brew "php"
+brew "composer"
+
+# Terraform
+brew "tfenv"
+
+# Runtime Management
+brew "mise"
+
+# =============================================================================
+# Security & Cryptography
+# =============================================================================
+brew "pycparser"
+brew "cffi"
+brew "cryptography"
+brew "openssl@1.1"
+brew "osv-scanner"
+
+# =============================================================================
+# Cloud & DevOps Tools
+# =============================================================================
+brew "aqua"
 brew "argo"
+brew "awscli"
 brew "cloudquery/tap/cloudquery"
-brew "owlinux1000/tap/gcstree"
-brew "shopify/shopify/shopify-cli"
+
+# =============================================================================
+# Database & Data Tools
+# =============================================================================
 brew "mysql", restart_service: :changed
 brew "mysql-client"
+brew "rtmpdump"
+brew "freetds"
+brew "sqlparse"
+
+# =============================================================================
+# Text Processing & Search Tools
+# =============================================================================
+brew "bat"
+brew "fd"
+brew "fzf"
+brew "jq"
+brew "nkf"
+brew "python-yq", link: false
+brew "rename"
+brew "ripgrep"
+brew "xq"
+brew "yq"
+
+# =============================================================================
+# Git & Version Control
+# =============================================================================
+brew "gh"
+brew "lazygit"
+
+# =============================================================================
+# Image & Media Processing
+# =============================================================================
+brew "jpeg"
+brew "jpegoptim"
+brew "tesseract"
+brew "ffmpeg"
+brew "gdk-pixbuf"
+brew "netpbm"
+brew "librsvg"
+brew "graphviz"
+brew "imagemagick"
+brew "ghostscript"
+brew "yt-dlp"
+
+# =============================================================================
+# Terminal & Shell Enhancement
+# =============================================================================
+brew "neovim"
+brew "starship"
+brew "tmux"
+brew "tree"
+brew "zsh"
+brew "reattach-to-user-namespace"
+
+# =============================================================================
+# macOS-specific Tools
+# =============================================================================
+brew "blueutil"
+brew "pngpaste"
+
+# =============================================================================
+# Window Management & System Tools
+# =============================================================================
 brew "koekeishiya/formulae/skhd"
 brew "koekeishiya/formulae/yabai"
 
-# === 7. Visual / CLI Utility ===
-brew "bat"
-brew "xq"
-brew "yq"
-brew "cmatrix"
-brew "parallel"
-brew "gdrive"
+# =============================================================================
+# Network & VPN Tools
+# =============================================================================
+brew "openfortivpn"
 
-# === 8. Media / Graphics ===
-brew "aom"
-brew "libavif"
-brew "jpeg-xl"
-brew "jpegoptim"
-brew "webp"
-brew "little-cms2"
-brew "openjpeg"
-brew "leptonica"
-brew "libheif"
-brew "libraw"
-brew "gd"
-brew "gdk-pixbuf"
-brew "graphviz"
-brew "netpbm"
-brew "ghostscript"
-brew "imagemagick"
-brew "pango"
-brew "harfbuzz"
-brew "tesseract"
-brew "yt-dlp"
-brew "ffmpeg"
-brew "librsvg"
+# =============================================================================
+# Specialized Tools
+# =============================================================================
+brew "cmatrix"
+brew "gdrive"
+brew "owlinux1000/tap/gcstree"
+brew "pwgen"
+brew "shopify/shopify/shopify-cli"
+
+# =============================================================================
+# GUI Applications (Casks)
+# =============================================================================
+
+# Fonts
+cask "font-hack-nerd-font"
+cask "font-jetbrains-mono-nerd-font"
+
+# Development Tools
+cask "gcloud-cli"
+cask "ngrok"
+cask "slack-cli"
+cask "wezterm@nightly"
+
+# System Utilities
+cask "hiddenbar"
+cask "jordanbaird-ice"
+cask "keycastr"
+cask "sip-app"
+
+# Communication & File Sharing
+cask "neardrop"
+
+# Browsers
+cask "thebrowsercompany-dia"
