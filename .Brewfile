@@ -11,11 +11,13 @@ tap "homebrew/services"
 tap "koekeishiya/formulae"
 tap "ngrok/ngrok"
 tap "owlinux1000/tap"
+tap "shivammathur/php"
 tap "shopify/shopify"
 
 # =============================================================================
 # System Libraries & Dependencies
 # =============================================================================
+brew "cairo"
 brew "libpng"
 brew "little-cms2"
 brew "webp"
@@ -82,6 +84,9 @@ brew "volta"
 # Go
 brew "go"
 
+# Java
+brew "openjdk"
+
 # PHP
 brew "tidy-html5"
 brew "php"
@@ -117,6 +122,7 @@ brew "mysql", restart_service: :changed
 brew "mysql-client"
 brew "rtmpdump"
 brew "freetds"
+brew "pgformatter"
 brew "sqlparse"
 
 # =============================================================================
@@ -137,7 +143,10 @@ brew "yq"
 # Git & Version Control
 # =============================================================================
 brew "gh"
+brew "git-delta"
+brew "git-filter-repo"
 brew "lazygit"
+brew "subversion"
 
 # =============================================================================
 # Image & Media Processing
@@ -161,6 +170,7 @@ brew "neovim"
 brew "starship"
 brew "tmux"
 brew "tree"
+brew "zoxide"
 brew "zsh"
 brew "reattach-to-user-namespace"
 
@@ -169,6 +179,7 @@ brew "reattach-to-user-namespace"
 # =============================================================================
 brew "blueutil"
 brew "pngpaste"
+brew "tag"
 
 # =============================================================================
 # Window Management & System Tools
@@ -197,14 +208,18 @@ brew "shopify/shopify/shopify-cli"
 # Fonts
 cask "font-hack-nerd-font"
 cask "font-jetbrains-mono-nerd-font"
+cask "font-noto-sans-cjk"
 
 # Development Tools
+cask "copilot-cli"
 cask "gcloud-cli"
 cask "ngrok"
 cask "slack-cli"
+cask "tuist"
 cask "wezterm@nightly"
 
 # System Utilities
+cask "bunch"
 cask "hiddenbar"
 cask "jordanbaird-ice"
 cask "keycastr"
@@ -212,6 +227,14 @@ cask "sip-app"
 
 # Communication & File Sharing
 cask "neardrop"
+cask "screens-connect"
+cask "tailscale-app"
 
 # Browsers
 cask "thebrowsercompany-dia"
+
+# =============================================================================
+# Go Packages
+# =============================================================================
+go "github.com/GoogleCloudPlatform/vertex-ai-creative-studio/experiments/mcp-genmedia/mcp-genmedia-go/mcp-imagen-go"
+go "github.com/pcasteran/terraform-graph-beautifier"
