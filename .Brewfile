@@ -10,7 +10,10 @@ tap "homebrew/bundle"
 tap "homebrew/services"
 tap "koekeishiya/formulae"
 tap "ngrok/ngrok"
+tap "osx-cross/arm"
+tap "osx-cross/avr"
 tap "owlinux1000/tap"
+tap "qmk/qmk"
 tap "shivammathur/php"
 tap "shopify/shopify"
 
@@ -78,8 +81,6 @@ brew "uv"
 
 # Node.js
 brew "fnm"
-brew "nvm"
-brew "volta"
 
 # Go
 brew "go"
@@ -119,7 +120,7 @@ brew "cloudquery/tap/cloudquery"
 # Database & Data Tools
 # =============================================================================
 brew "mysql", restart_service: :changed
-brew "mysql-client"
+brew "percona-toolkit"
 brew "rtmpdump"
 brew "freetds"
 brew "pgformatter"
@@ -193,6 +194,21 @@ brew "koekeishiya/formulae/yabai"
 brew "openfortivpn"
 
 # =============================================================================
+# Keyboard & Firmware Tools (QMK)
+# =============================================================================
+brew "arm-none-eabi-gcc"
+brew "avrdude"
+brew "dfu-programmer"
+brew "dfu-util"
+brew "osx-cross/avr/avr-gcc@9"
+brew "qmk/qmk/qmk"
+
+# =============================================================================
+# iOS / Xcode Tools
+# =============================================================================
+brew "xcodegen"
+
+# =============================================================================
 # Specialized Tools
 # =============================================================================
 brew "cmatrix"
@@ -222,6 +238,7 @@ cask "wezterm@nightly"
 cask "bunch"
 cask "hiddenbar"
 cask "jordanbaird-ice"
+cask "karabiner-elements"
 cask "keycastr"
 cask "sip-app"
 
@@ -238,3 +255,14 @@ cask "thebrowsercompany-dia"
 # =============================================================================
 go "github.com/GoogleCloudPlatform/vertex-ai-creative-studio/experiments/mcp-genmedia/mcp-genmedia-go/mcp-imagen-go"
 go "github.com/pcasteran/terraform-graph-beautifier"
+
+# =============================================================================
+# uv Packages
+# =============================================================================
+uv "migrate-to-uv"
+
+# =============================================================================
+# npm Packages
+# =============================================================================
+npm "corepack"
+npm "intelephense"
