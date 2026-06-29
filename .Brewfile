@@ -3,18 +3,16 @@
 # =============================================================================
 
 # Third-party taps
-tap "aquaproj/aqua"
+tap "asmvik/formulae", "https://github.com/asmvik/homebrew-formulae.git"
 tap "cloudquery/tap"
 tap "grishka/grishka"
 tap "homebrew/bundle"
 tap "homebrew/services"
-tap "koekeishiya/formulae"
 tap "ngrok/ngrok"
 tap "osx-cross/arm"
 tap "osx-cross/avr"
 tap "owlinux1000/tap"
 tap "qmk/qmk"
-tap "shivammathur/php"
 tap "shopify/shopify"
 
 # =============================================================================
@@ -61,8 +59,10 @@ brew "bison"
 brew "coreutils"
 brew "dateutils"
 brew "docutils"
+brew "fswatch"
 brew "parallel"
 brew "perl"
+brew "shellcheck"
 brew "stow"
 brew "watch"
 brew "wget"
@@ -71,16 +71,11 @@ brew "wget"
 # Programming Languages & Version Managers
 # =============================================================================
 # Python
-brew "python@3.9"
-brew "python@3.10"
-brew "python@3.11"
 brew "python@3.12"
-brew "pyenv"
-brew "pyenv-virtualenv"
 brew "uv"
 
 # Node.js
-brew "fnm"
+brew "volta"
 
 # Go
 brew "go"
@@ -92,9 +87,6 @@ brew "openjdk"
 brew "tidy-html5"
 brew "php"
 brew "composer"
-
-# Terraform
-brew "tfenv"
 
 # Runtime Management
 brew "mise"
@@ -162,12 +154,14 @@ brew "librsvg"
 brew "graphviz"
 brew "imagemagick"
 brew "ghostscript"
+brew "poppler"
 brew "yt-dlp"
 
 # =============================================================================
 # Terminal & Shell Enhancement
 # =============================================================================
 brew "neovim"
+brew "tree-sitter-cli"
 brew "starship"
 brew "tmux"
 brew "tree"
@@ -185,8 +179,8 @@ brew "tag"
 # =============================================================================
 # Window Management & System Tools
 # =============================================================================
-brew "koekeishiya/formulae/skhd"
-brew "koekeishiya/formulae/yabai"
+brew "asmvik/formulae/skhd"
+brew "asmvik/formulae/yabai"
 
 # =============================================================================
 # Network & VPN Tools
